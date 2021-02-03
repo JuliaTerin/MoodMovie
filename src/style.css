@@ -2,20 +2,183 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: 0;
+	font-family: sans-serif;
 }
 
-.logo {
-	text-align: center;
+header{
+	width: 100%;
+    height: 100px;
+    display: flex;
+	justify-content: center;
+	position: relative;
 }
+
+.navbar{
+	position: sticky;
+	width: 100%;
+	height: 100%;
+}
+
+.navbar-list, .list{
+list-style: none;
+}
+
 .logo-next {
 	width: 20px;
 	height: 20px;
-	margin-top: 2.4em;
+	margin-top: 1.4em;
 	margin-left: 0.5em;
+}
+
+.logo-m,.logo-o,.logo-oo,.logo-d,
+.logo-mm,.logo-ooo,.logo-v,.logo-i,.logo-e{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size:  25px;
+    letter-spacing: 5px;
+    z-index: 1;
+	opacity: 0;
+	margin-top: 25px;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.589);
+	animation: drop-logo  2s ease-in-out 3s normal forwards;
+}
+@keyframes drop-logo{
+    0%{
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(3, 3);
+       
+    }
+    100%{
+        transform:scale(1,1);
+        opacity: 1;
+    }
+}
+.logo-m{
+    animation-delay: 150ms; 
+}
+.logo-o{
+    animation-delay: 250ms;
+}
+.logo-oo{
+    animation-delay: 350ms;
+}
+.logo-d{
+    animation-delay: 450ms;
+}
+.logo-mm{
+    animation-delay: 550ms;
+}
+.logo-ooo{
+    animation-delay: 650ms;
+}
+.logo-v{
+    animation-delay: 750ms;
+}
+.logo-i{
+    animation-delay: 850ms;
+}
+.logo-e{
+    animation-delay: 950ms;
+}
+
+.logo-background{
+	position: absolute;
+	top: -10px;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 100px;
+	animation: background-animation 1s ease-in-out 3s 1 normal forwards;
+}
+@keyframes background-animation{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 12.5%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.logo-background-red{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: 14px;
+    background-color: #EB4747;
+}
+
+.logo-background-orange{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: 14px;
+    background-color: #F28E45;
+}
+.logo-background-yellow{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: 14px;
+	background-color: #FBFE54;
+}
+.logo-background-green{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: 14px;
+    background-color: #47EB70;
+}
+
+.logo-background-royalBlue{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: 14px;
+    background-color: #47EBEB;
+}
+
+.logo-background-blue{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: 14px;
+    background-color: #4770eb;
+}
+
+.logo-background-purple{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: 14px;
+    background-color: #9947eb;
+}
+.logo-background-pink{
+    width: 30px;
+    height: 122px;
+    margin-top: -5px;
+    margin-right: -2px;
+    background-color: #eb47c2;
+}
+
+
+.wrapper-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-home {
 	text-align: center;
+	margin-top: 20%;
 	margin: 4em 1em 1em 1em;
 	font-size: 18px;
 	font-weight: bold;
@@ -27,7 +190,6 @@ button {
 	text-transform: uppercase;
 	margin-top: 1.5em;
 	align-items: center;
-	margin-left: 32.5%;
 	height: 2.6em;
 }
 
@@ -35,8 +197,14 @@ button {
 	background-color: #47ebeb;
 	width: 35vw;
 }
+.btn-start:hover {
+	background-color: transparent;
+	border: solid 3px #47ebeb;
+}
 
 footer {
+	position: fixed;
+	bottom: 0;
 	width: 100vw;
 	margin-top: 13em;
 	text-align: center;
@@ -60,10 +228,20 @@ footer a {
 	margin-top: 3em;
 }
 
+.btn-stressed:hover {
+	border: solid 3px #eb4747;
+	background-color: transparent;
+}
+
 .btn-inspired {
 	background-color: #f28e45;
 	width: 55vw;
 	margin-left: 22.8%;
+}
+
+.btn-inspired:hover {
+	border: solid 3px #f28e45;
+	background-color: transparent;
 }
 
 .btn-happy {
@@ -72,10 +250,20 @@ footer a {
 	margin-left: 22.8%;
 }
 
+.btn-happy:hover {
+	border: solid 3px #fbfe54;
+	background-color: transparent;
+}
+
 .btn-bored {
 	background-color: #47eb70;
 	width: 55vw;
 	margin-left: 22.8%;
+}
+
+.btn-bored:hover {
+	border: solid 3px #47eb70;
+	background-color: transparent;
 }
 
 .btn-heartbroken {
@@ -84,10 +272,20 @@ footer a {
 	margin-left: 22.8%;
 }
 
+.btn-heartbroken:hover {
+	border: solid 3px #47ebeb;
+	background-color: transparent;
+}
+
 .btn-sad {
 	background-color: #4770eb;
 	width: 55vw;
 	margin-left: 22.8%;
+}
+
+.btn-sad:hover {
+	border: solid 3px #4770eb;
+	background-color: transparent;
 }
 
 .btn-sensitive {
@@ -96,10 +294,20 @@ footer a {
 	margin-left: 22.8%;
 }
 
+.btn-sensitive:hover {
+	border: solid 3px #9947eb;
+	background-color: transparent;
+}
+
 .btn-in-love {
 	background-color: #eb47c2;
 	width: 55vw;
 	margin-left: 22.8%;
+}
+
+.btn-in-love:hover {
+	border: solid 3px #eb47c2;
+	background-color: transparent;
 }
 
 .title-feeling {
@@ -115,21 +323,47 @@ footer a {
 	font-size: 18px;
 	font-weight: bold;
 }
+.container-movie{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
+	margin-bottom: -140px;
+
+}
+article{	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 20px;
+}
 
 .movie-poster {
 	max-width: 60vw;
-	max-height: 30vh;
+	max-height: 30vh;	
+	object-fit: contain;
 	width: auto;
 	height: auto;
+	z-index: 1;
+	margin-top: 10px;
 }
 
 .movie-details-stars {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 1em;
 	height: 1em;
 	margin-left: 5px;
+	z-index: 1;
 }
 
 .movie-strong-text {
+	display: flex;
+	flex-direction: column;
 	font-size: 14px;
 	margin-top: 5px;
 	text-align: left;

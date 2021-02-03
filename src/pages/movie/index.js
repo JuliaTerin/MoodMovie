@@ -7,9 +7,18 @@ export default async () => {
     
     container.innerHTML = `
         <header>
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="list">
+                    <a class="title" href="./#home"><img class="logo-next" src="img/next.png" alt="logo github"></a>
+                    </li>
+                </ul>
+            </nav>
+            </header>
+            <div>
             <h2 class="title-movies">Achamos que vai gostar dessa seleção que fizemos para você <img class="logo-github" src="img/favourite.png" alt="logo github"></h2>
-        </header>
-    `;
+            </div>
+            `;
 
     const data = await Promise.all(genres.map(genre => getMovies(genre)))
     let child = showingMoviesList(data.flat())
@@ -24,13 +33,12 @@ const showingMoviesList = (movies) => {
     for (let movie of movies) {
         
         moviesList += `
+        <section class="container-movie">
             <div class="movie-details" id="${movie.id}">
-                <header>
+                <article>
                     <img src = ${movie.poster} class ="movie-poster" alt = ${movie.title}/>
                     <p><img class="logo-github" src="img/star.png" alt="logo github">${movie.imdb_rating}</p>
                     <h1 class="strong-text">${movie.title}</h1>
-                </header>
-                <article>
                     <h2 class="strong-text">Sinopse:</h2>
                     <p >${movie.overview}</p>
                     <h2 class="strong-text">Gênero:</h2>
@@ -43,6 +51,7 @@ const showingMoviesList = (movies) => {
                     <p>${movie.sources}</p>
                 </article>
             </div>
+            </section>
         `}
     moviesList += "</div>"
     return moviesList
