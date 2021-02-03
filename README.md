@@ -110,7 +110,7 @@ A aplicação foi desenvolvida como um [Single Page Application (SPA)](https://p
 
 Durante o processo, mudanças foram adotadas para melhor desempenho da aplicação no tempo possível para executá-las. A equipe optou por trazer as informações dos filmes junto aos resultados das indicações, tornando o acesso as informações mais rápido para o usuário.
 
-![Imagem!](gif da nossá pag)
+![Imagem!](./src/img/MoodMovie.gif)
 
 ### E aí minha filha, como está seu humor hoje?  Teste nossa aplicação [aqui](https://github.com/ale-alve)
 
